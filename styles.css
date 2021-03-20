@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 body {
-  background-color: aquamarine;
   font-family: 'Roboto', sans-serif;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -15,12 +14,32 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-transition: .5s;
+  transition: .5s;
+  background-color: aquamarine;
+}
+
+body #lightbulb {
+  position: absolute;
+  width: 5rem;
+  top: 3%;
+  right: 3%;
+  cursor: pointer;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+body #lightbulb:active {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 body h1 {
   font-size: 5rem;
   margin: 0;
   padding: 0;
+  -webkit-transition: .5s;
+  transition: .5s;
 }
 
 body #calculator {
@@ -31,8 +50,8 @@ body #calculator {
   height: 35rem;
 }
 
-body #calculator #resultsWindow {
-  background-color: lightyellow;
+body #calculator #calculatorDisplay {
+  background-color: #FFF5A3;
   border: black solid;
   height: 6rem;
   width: 80%;
@@ -105,5 +124,81 @@ body #calculator #buttonsContainer .btn {
 
 body #calculator #buttonsContainer .btn:hover {
   opacity: 75%;
+}
+
+.darkMode {
+  background-color: #211e35;
+}
+
+.darkMode h1 {
+  color: white;
+}
+
+@media screen and (max-width: 767px) {
+  body #lightbulb {
+    width: 3rem;
+  }
+  body h1 {
+    font-size: 3rem;
+    margin: .5rem;
+  }
+  body #calculator {
+    width: 90%;
+    height: 32rem;
+  }
+  body #calculator #calculatorDisplay {
+    height: 4rem;
+    margin: 1.5rem auto;
+    font-size: 2.5rem;
+  }
+  body #calculator #buttonsContainer {
+    padding: 0 1rem 1rem 1rem;
+  }
+  body #calculator #buttonsContainer #numbers {
+    width: 25rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  body #calculator #buttonsContainer #operators {
+    width: 8rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  body #calculator #buttonsContainer #operators div {
+    height: 3rem;
+  }
+  body #calculator #buttonsContainer .btn {
+    font-size: 2.5rem;
+    min-width: 3.5rem;
+    height: 5rem;
+    margin: .1rem;
+    border: black solid;
+    border-radius: .25rem;
+    cursor: pointer;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  body #calculator #buttonsContainer .btn:hover {
+    opacity: 75%;
+  }
+  .darkMode {
+    background-color: #211e35;
+  }
+  .darkMode h1 {
+    color: white;
+  }
 }
 /*# sourceMappingURL=styles.css.map */

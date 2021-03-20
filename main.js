@@ -1,5 +1,7 @@
-
+$("#lightbulb").on('click', switchDarkMode)
 
 $(".btn").on('click', printButton)
 
-$("#clear").on('click', clearWindow)
+$("#clear-btn").on('click', clearWindow)
+
+$("#equal-btn").on('click', showResult($("#calculatorDisplay").val()))

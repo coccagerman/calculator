@@ -8,13 +8,12 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="calculator.png">
 </head>
-<body>
+<body class="">
     <h1>Calculator</h1>
+    <img src="lampOff.png" alt="Lightbulb icon" id="lightbulb">
     <div id="calculator">
         <section>
-            <div id="resultsWindow">
-
-            </div>
+            <input type="text" value="" id="calculatorDisplay" readonly/>
         </section>
         <section id="buttonsContainer">
             <div id="numbers">
@@ -35,8 +34,8 @@
                 <div class="btn">÷</div>
                 <div class="btn">+</div>
                 <div class="btn">-</div>
-                <div class="btn">=</div>
-                <div id="clear" class="btn">C</div>
+                <div class="btn" id="equal-btn">=</div>
+                <div class="btn" id="clear-btn">C</div>
             </div>
         </section>
     </div>

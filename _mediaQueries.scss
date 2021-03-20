@@ -1,0 +1,66 @@
+@media screen and (max-width: 767px) {
+    body {
+            #lightbulb {
+                width: 3rem;
+            }
+    
+            h1{
+                font-size: 3rem;
+                margin: .5rem;
+            }
+    
+            #calculator {
+                width: 90%;
+                height: 32rem;
+            
+                #calculatorDisplay {
+                    height: 4rem;
+                    margin: 1.5rem auto;
+                    font-size: 2.5rem;
+                }
+    
+                #buttonsContainer{
+                padding: 0 1rem 1rem 1rem;
+
+                    #numbers {
+                        width: 25rem;
+                        display: flex;
+                        flex-wrap: wrap;
+                    }
+    
+                    #operators {
+                        width: 8rem;
+                        display: flex;
+                        flex-wrap: wrap;
+                        div {
+                            height: 3rem;
+                        }
+                    }
+    
+                    .btn {
+                        font-size: 2.5rem;
+                        min-width: 3.5rem;
+                        height: 5rem;
+                        margin: .1rem;
+                        border: black solid;
+                        border-radius: .25rem;
+                        cursor: pointer; 
+                        display: flex;
+                            justify-content: center;
+                            align-items: center;
+    
+                            &:hover {
+                                opacity: 75%;
+                            }
+                    }
+                }
+            }
+    }
+    
+    .darkMode {
+        background-color: rgb(33, 30, 53);
+        h1 {
+            color: white;
+        }
+    }
+}

@@ -1,17 +1,32 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 body {
-    background-color: aquamarine;
     font-family: 'Roboto', sans-serif;
     display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        transition: .5s;
+        background-color: aquamarine;
+
+        #lightbulb {
+            position: absolute;
+            width: 5rem;
+            top: 3%;
+            right: 3%;
+            cursor: pointer;
+            transition: .5s;
+
+            &:active {
+                transform: scale(1.10);
+            }
+        }
 
         h1{
             font-size: 5rem;
             margin: 0;
             padding: 0;
+            transition: .5s;
         }
 
         #calculator {
@@ -21,8 +36,8 @@ body {
             width: 40%;
             height: 35rem;
         
-            #resultsWindow {
-                background-color: lightyellow;
+            #calculatorDisplay {
+                background-color: #FFF5A3;
                 border: black solid;
                 height: 6rem;
                 width: 80%;
@@ -76,3 +91,9 @@ body {
         }
 }
 
+.darkMode {
+    background-color: rgb(33, 30, 53);
+    h1 {
+        color: white;
+    }
+}
