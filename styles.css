@@ -134,7 +134,10 @@ body #calculator #buttonsContainer .btn:hover {
   color: white;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1300px) {
+  body {
+    overflow: hidden;
+  }
   body #lightbulb {
     width: 3rem;
   }
@@ -144,7 +147,7 @@ body #calculator #buttonsContainer .btn:hover {
   }
   body #calculator {
     width: 90%;
-    height: 32rem;
+    height: 31rem;
   }
   body #calculator #calculatorDisplay {
     height: 4rem;

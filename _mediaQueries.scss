@@ -1,5 +1,7 @@
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1300px) {
     body {
+    overflow: hidden;
+
             #lightbulb {
                 width: 3rem;
             }
@@ -11,7 +13,7 @@
     
             #calculator {
                 width: 90%;
-                height: 32rem;
+                height: 31rem;
             
                 #calculatorDisplay {
                     height: 4rem;
