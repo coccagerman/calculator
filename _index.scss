@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+body {
+    background-color: aquamarine;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        h1{
+            font-size: 5rem;
+            margin: 0;
+            padding: 0;
+        }
+
+        #calculator {
+            background-color: gray;
+            border: solid black;
+            border-radius: 1rem;
+            width: 40%;
+            height: 35rem;
+        
+            #resultsWindow {
+                background-color: lightyellow;
+                border: black solid;
+                height: 6rem;
+                width: 80%;
+                margin: 2rem auto;
+                border-radius: .5rem;
+                font-size: 3rem;
+                text-align: right;
+                display: flex;
+                    align-items: center;
+                    justify-content: right;
+            }
+
+            #buttonsContainer{
+            padding: 0 2rem 1rem 2rem;
+            display: flex;
+                justify-content: center;
+
+                #numbers {
+                    width: 18rem;
+                    display: flex;
+                    flex-wrap: wrap;
+                }
+
+                #operators {
+                    width: 12rem;
+                    display: flex;
+                    flex-wrap: wrap;
+                    div {
+                        height: 6.5rem;
+                    }
+                }
+
+                .btn {
+                    font-size: 4rem;
+                    background-color: lightgray;
+                    min-width: 4.5rem;
+                    height: 4.5rem;
+                    margin: .5rem;
+                    border: black solid;
+                    border-radius: .25rem;
+                    cursor: pointer; 
+                    display: flex;
+                        justify-content: center;
+                        align-items: center;
+
+                        &:hover {
+                            opacity: 75%;
+                        }
+                }
+            }
+        }
+}
+
