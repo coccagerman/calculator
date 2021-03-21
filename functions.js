@@ -13,8 +13,8 @@ function switchDarkMode () {
 
 // Print values in display when buttons are pressed
 function printButton (e) {
-    document.getElementById("calculatorDisplay").value += e.target.textContent
-    console.log('display value ' + document.getElementById("calculatorDisplay").value)
+    let pressedKeyValue = e.target.getAttribute('value')
+    document.getElementById("calculatorDisplay").value += pressedKeyValue
 }
 
 // Clear display when C button is pressed
