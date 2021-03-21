@@ -3,17 +3,20 @@
     overflow: hidden;
 
             #lightbulb {
+                position: absolute;
+                top: 4%;
+                right: 9%;
                 width: 3rem;
             }
     
             h1{
                 font-size: 3rem;
-                margin: .5rem;
+                margin: .5rem .5rem 1rem -4rem;
             }
     
             #calculator {
                 width: 90%;
-                height: 31rem;
+                height: 29rem;
             
                 #calculatorDisplay {
                     height: 4rem;
@@ -35,14 +38,14 @@
                         display: flex;
                         flex-wrap: wrap;
                         div {
-                            height: 3rem;
+                            height: 2.75rem;
                         }
                     }
     
                     .btn {
                         font-size: 2.5rem;
                         min-width: 3.5rem;
-                        height: 5rem;
+                        height: 4.25rem;
                         margin: .1rem;
                         border: black solid;
                         border-radius: .25rem;
