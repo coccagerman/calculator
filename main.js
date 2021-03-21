@@ -1,6 +1,6 @@
 $("#lightbulb").on('click', switchDarkMode)
 
-$(".btn").on('click', printButton)
+$(".value-btn").on('click', printButton)
 
 $("#clear-btn").on('click', clearWindow)
 
