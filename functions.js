@@ -11,22 +11,72 @@ function switchDarkMode () {
     }
 }
 
+// Tratar de prohibir repeticion de operadores basándose en el último botón apretado
 // Print values in display when buttons are pressed
 function printButton (e) {
+    let calculatorDisplay = document.getElementById("calculatorDisplay").innerHTML
     let pressedKeyValue = e.target.getAttribute('value')
-    document.getElementById("calculatorDisplay").value += pressedKeyValue
+    var lastCharacter
+
+    console.log('pressedKeyValue ' + pressedKeyValue)
+    console.log('calculatorDisplay ' + calculatorDisplay)
+
+        if (pressedKeyValue == '.' && calculatorDisplay.includes('.')) {}
+        else if (
+            (pressedKeyValue == '.' && calculatorDisplay == '') ||
+            (pressedKeyValue == '-' && calculatorDisplay == '') ||
+            (pressedKeyValue == '+' && calculatorDisplay == '') ||
+            (pressedKeyValue == '*' && calculatorDisplay == '') ||
+            (pressedKeyValue == '/' && calculatorDisplay == '')
+        ) {}
+        else if (
+            (pressedKeyValue == '.' && lastCharacter == '+') ||
+            (pressedKeyValue == '.' && lastCharacter == '-') ||
+            (pressedKeyValue == '.' && lastCharacter == '/') ||
+            (pressedKeyValue == '.' && lastCharacter == '*') ||
+
+            (pressedKeyValue == '+' && lastCharacter == '+') ||
+            (pressedKeyValue == '+' && lastCharacter == '-') ||
+            (pressedKeyValue == '+' && lastCharacter == '/') ||
+            (pressedKeyValue == '+' && lastCharacter == '*') ||
+
+            (pressedKeyValue == '-' && lastCharacter == '+') ||
+            (pressedKeyValue == '-' && lastCharacter == '-') ||
+            (pressedKeyValue == '-' && lastCharacter == '/') ||
+            (pressedKeyValue == '-' && lastCharacter == '*') ||
+
+            (pressedKeyValue == '*' && lastCharacter == '+') ||
+            (pressedKeyValue == '*' && lastCharacter == '-') ||
+            (pressedKeyValue == '*' && lastCharacter == '/') ||
+            (pressedKeyValue == '*' && lastCharacter == '*') ||
+
+            (pressedKeyValue == '/' && lastCharacter == '+') ||
+            (pressedKeyValue == '/' && lastCharacter == '-') ||
+            (pressedKeyValue == '/' && lastCharacter == '/') ||
+            (pressedKeyValue == '/' && lastCharacter == '*')
+        ) {}
+        else if (calculatorDisplay == '') {
+            document.getElementById("calculatorDisplay").innerHTML = pressedKeyValue
+            lastCharacter = calculatorDisplay.slice(-1)
+            console.log('lastCharacter inside ' + lastCharacter)
+        }
+        else {
+            document.getElementById("calculatorDisplay").innerHTML += pressedKeyValue
+            lastCharacter = calculatorDisplay.slice(-1)
+            console.log('lastCharacter inside ' + lastCharacter)
+        }
 }
 
 // Clear display when C button is pressed
 function clearWindow () {
-    $("#calculatorDisplay").val("")
+    document.getElementById("calculatorDisplay").innerHTML = ''
 }
 
 // Show result in display when = button is pressed
 function showResult () {
-    console.log(eval(document.getElementById("calculatorDisplay").value))
-    let result = eval(document.getElementById("calculatorDisplay").value)
-    $("#calculatorDisplay").val(result)
+    let result = eval(document.getElementById("calculatorDisplay").innerHTML)
+    document.getElementById("calculatorDisplay").innerHTML = result
+
 }
 
 // Link buttons with keyboard keys 
@@ -52,3 +102,4 @@ function keyBoardKeys (e) {
         case 57: printButton($('#9').click()); break;
     }
 }
+

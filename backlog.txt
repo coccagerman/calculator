@@ -1,4 +1,7 @@
 - Los operadores solo se deben poder ingresar si hay números en el display.
 - No se pueden ingresar dos operadores juntos ('+-' '..' etc.)
+- Si el último valor ingresado es un operador, no debe arrojar resultado. Ej: "147+125-"
 - El punto solo se debe poder ingresar luego de un número ('.350' no se debe poder ingresar, si no que se debe ingresar '0.350')
 - Luego de mostrar un resultado, al ingresar un número nuevo, el resultado anterior debe borrarse.
+- Mostrar animación de botón apretado cuando se accionan acciones desde el keyboard.
+- Usar ternary operator when possible
