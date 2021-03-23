@@ -1,3 +1,5 @@
+var lastCharacter
+
 // Switch dark mode when lightbulb icon is pressed
 function switchDarkMode () {
     $('body').toggleClass('darkMode');
@@ -14,12 +16,8 @@ function switchDarkMode () {
 // Tratar de prohibir repeticion de operadores basándose en el último botón apretado
 // Print values in display when buttons are pressed
 function printButton (e) {
-    let calculatorDisplay = document.getElementById("calculatorDisplay").innerHTML
-    let pressedKeyValue = e.target.getAttribute('value')
-    var lastCharacter
-
-    console.log('pressedKeyValue ' + pressedKeyValue)
-    console.log('calculatorDisplay ' + calculatorDisplay)
+    var calculatorDisplay = document.getElementById("calculatorDisplay").innerHTML
+    var pressedKeyValue = e.target.getAttribute('value')
 
         if (pressedKeyValue == '.' && calculatorDisplay.includes('.')) {}
         else if (
@@ -34,36 +32,41 @@ function printButton (e) {
             (pressedKeyValue == '.' && lastCharacter == '-') ||
             (pressedKeyValue == '.' && lastCharacter == '/') ||
             (pressedKeyValue == '.' && lastCharacter == '*') ||
-
+    
             (pressedKeyValue == '+' && lastCharacter == '+') ||
             (pressedKeyValue == '+' && lastCharacter == '-') ||
             (pressedKeyValue == '+' && lastCharacter == '/') ||
             (pressedKeyValue == '+' && lastCharacter == '*') ||
-
+            (pressedKeyValue == '+' && lastCharacter == '.') ||
+    
             (pressedKeyValue == '-' && lastCharacter == '+') ||
             (pressedKeyValue == '-' && lastCharacter == '-') ||
             (pressedKeyValue == '-' && lastCharacter == '/') ||
             (pressedKeyValue == '-' && lastCharacter == '*') ||
-
+            (pressedKeyValue == '-' && lastCharacter == '.') ||
+    
             (pressedKeyValue == '*' && lastCharacter == '+') ||
             (pressedKeyValue == '*' && lastCharacter == '-') ||
             (pressedKeyValue == '*' && lastCharacter == '/') ||
             (pressedKeyValue == '*' && lastCharacter == '*') ||
-
+            (pressedKeyValue == '*' && lastCharacter == '.') ||
+    
             (pressedKeyValue == '/' && lastCharacter == '+') ||
             (pressedKeyValue == '/' && lastCharacter == '-') ||
             (pressedKeyValue == '/' && lastCharacter == '/') ||
-            (pressedKeyValue == '/' && lastCharacter == '*')
+            (pressedKeyValue == '/' && lastCharacter == '*') ||
+            (pressedKeyValue == '/' && lastCharacter == '.')
+    
         ) {}
         else if (calculatorDisplay == '') {
-            document.getElementById("calculatorDisplay").innerHTML = pressedKeyValue
+            calculatorDisplay += pressedKeyValue
+            document.getElementById("calculatorDisplay").innerHTML = calculatorDisplay 
             lastCharacter = calculatorDisplay.slice(-1)
-            console.log('lastCharacter inside ' + lastCharacter)
         }
         else {
-            document.getElementById("calculatorDisplay").innerHTML += pressedKeyValue
+            calculatorDisplay += pressedKeyValue
+            document.getElementById("calculatorDisplay").innerHTML = calculatorDisplay 
             lastCharacter = calculatorDisplay.slice(-1)
-            console.log('lastCharacter inside ' + lastCharacter)
         }
 }
 

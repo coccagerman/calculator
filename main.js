@@ -1,8 +1,3 @@
-// let pressedKeyValue = e.target.getAttribute('value')
-// let calculatorDisplay = document.getElementById("calculatorDisplay").value
-// let lastCharacter = String(calculatorDisplay).slice(-1)
-// console.log('lastCharacter ' + lastCharacter)
-
 // Switch dark mode when lightbulb icon is pressed
 $("#lightbulb").on('click', switchDarkMode)
 
