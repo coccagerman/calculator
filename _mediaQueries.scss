@@ -38,7 +38,7 @@
                         display: flex;
                         flex-wrap: wrap;
                         div {
-                            height: 2.75rem;
+                            height: 2.55rem;
                         }
                     }
     
@@ -56,6 +56,9 @@
     
                             &:hover {
                                 opacity: 75%;
+                            }
+                            &:active {
+                                color: red;
                             }
                     }
                 }

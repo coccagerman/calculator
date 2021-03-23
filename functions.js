@@ -1,4 +1,5 @@
-var lastCharacter
+var calculatorDisplay = document.getElementById("calculatorDisplay").innerHTML
+var lastCharacter = calculatorDisplay.slice(-1)
 
 // Switch dark mode when lightbulb icon is pressed
 function switchDarkMode () {
@@ -16,7 +17,6 @@ function switchDarkMode () {
 // Tratar de prohibir repeticion de operadores basándose en el último botón apretado
 // Print values in display when buttons are pressed
 function printButton (e) {
-    var calculatorDisplay = document.getElementById("calculatorDisplay").innerHTML
     var pressedKeyValue = e.target.getAttribute('value')
 
         if (pressedKeyValue == '.' && calculatorDisplay.includes('.')) {}
@@ -56,7 +56,6 @@ function printButton (e) {
             (pressedKeyValue == '/' && lastCharacter == '/') ||
             (pressedKeyValue == '/' && lastCharacter == '*') ||
             (pressedKeyValue == '/' && lastCharacter == '.')
-    
         ) {}
         else if (calculatorDisplay == '') {
             calculatorDisplay += pressedKeyValue
@@ -70,23 +69,29 @@ function printButton (e) {
         }
 }
 
-// Clear display when C button is pressed
-function clearWindow () {
+// Clear display when AC button is pressed
+function clearDisplay () {
     document.getElementById("calculatorDisplay").innerHTML = ''
+}
+
+// Erase last character when C button is pressed
+function eraseLastCharacter () {
+    let newDisplay = calculatorDisplay.slice(0, calculatorDisplay.length - 1);
+    document.getElementById("calculatorDisplay").innerHTML = newDisplay
+    console.log('eraseLastCharacter ' + newDisplay)
 }
 
 // Show result in display when = button is pressed
 function showResult () {
     let result = eval(document.getElementById("calculatorDisplay").innerHTML)
     document.getElementById("calculatorDisplay").innerHTML = result
-
 }
 
 // Link buttons with keyboard keys 
 function keyBoardKeys (e) {
     switch (e.which) {
-        case 27: clearWindow(); break;
-        case 8: clearWindow(); break;
+        case 27: clearDisplay(); break;
+        case 8: clearDisplay(); break;
         case 13: showResult(); break;
         case 190: printButton($('#decimal').click()); break;
         case 189: printButton($('#substract').click()); break;
