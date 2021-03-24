@@ -198,12 +198,6 @@ body #calculator #buttonsContainer .btn:active {
         -ms-flex-align: center;
             align-items: center;
   }
-  body #calculator #buttonsContainer .btn:hover {
-    opacity: 75%;
-  }
-  body #calculator #buttonsContainer .btn:active {
-    color: red;
-  }
   .darkMode {
     background-color: #211e35;
   }

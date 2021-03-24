@@ -19,7 +19,10 @@ function switchDarkMode () {
 function printButton (e) {
     var pressedKeyValue = e.target.getAttribute('value')
 
-        if (pressedKeyValue == '.' && calculatorDisplay.includes('.')) {}
+        if (pressedKeyValue == '.' && calculatorDisplay.includes('.')
+        ) {}
+        else if (calculatorDisplay.length >= 10)
+        {}
         else if (
             (pressedKeyValue == '.' && calculatorDisplay == '') ||
             (pressedKeyValue == '-' && calculatorDisplay == '') ||
@@ -72,13 +75,15 @@ function printButton (e) {
 // Clear display when AC button is pressed
 function clearDisplay () {
     document.getElementById("calculatorDisplay").innerHTML = ''
+    calculatorDisplay = ''
 }
 
 // Erase last character when C button is pressed
 function eraseLastCharacter () {
     let newDisplay = calculatorDisplay.slice(0, calculatorDisplay.length - 1);
     document.getElementById("calculatorDisplay").innerHTML = newDisplay
-    console.log('eraseLastCharacter ' + newDisplay)
+    calculatorDisplay = newDisplay
+    lastCharacter = calculatorDisplay.slice(-1)
 }
 
 // Show result in display when = button is pressed

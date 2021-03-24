@@ -1,6 +1,3 @@
-- Bug: El texto del display excede la capacidad de la ventana. Llegada determinada cantidad de dígitos, no debe tomar más inputs.
-- Bug: Al borrar el display con el botón AC y luego volver a insertar inputs, aparece de nuevo el contenido anterior.
-- Bug: Al borrar el último caracter con el botón C y luego volver a insertar inputs, duplica el input insertado. Si se aprieta 1, inserta 11.c
+- Mejora: En el display se debiesen poder ingresar todos los números que se quisieran, y la visión irse corriendo hacia la derecha a medida que el input supera la capacidad de la pantalla.
 - Luego de mostrar un resultado, al ingresar un número nuevo, el resultado anterior debe borrarse.
-- Mostrar animación de botón apretado cuando se accionan acciones desde el keyboard.
 - Usar ternary operator when possible
