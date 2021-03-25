@@ -44,7 +44,7 @@ body h1 {
 
 body #calculator {
   background-color: gray;
-  border: solid black;
+  border: solid black 4px;
   border-radius: 1rem;
   width: 32%;
   height: 30rem;
@@ -58,7 +58,7 @@ body #calculator #calculatorDisplay {
   margin: 2rem auto;
   border-radius: .5rem;
   font-size: 3rem;
-  text-align: right;
+  text-align: left;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

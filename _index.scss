@@ -31,7 +31,7 @@ body {
 
         #calculator {
             background-color: gray;
-            border: solid black;
+            border: solid black 4px;
             border-radius: 1rem;
             width: 32%;
             height: 30rem;
@@ -44,7 +44,7 @@ body {
                 margin: 2rem auto;
                 border-radius: .5rem;
                 font-size: 3rem;
-                text-align: right;
+                text-align: left;
                 display: flex;
                     align-items: center;
                     justify-content: right;

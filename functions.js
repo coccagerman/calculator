@@ -88,8 +88,9 @@ function eraseLastCharacter () {
 
 // Show result in display when = button is pressed
 function showResult () {
-    let result = eval(document.getElementById("calculatorDisplay").innerHTML)
+    let result = eval(calculatorDisplay)
     document.getElementById("calculatorDisplay").innerHTML = result
+    calculatorDisplay = result
 }
 
 // Link buttons with keyboard keys 
