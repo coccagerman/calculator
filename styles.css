@@ -151,7 +151,7 @@ body #calculator #buttonsContainer .btn:active {
   }
   body #calculator {
     width: 90%;
-    height: 29rem;
+    height: 28rem;
   }
   body #calculator #calculatorDisplay {
     height: 4rem;

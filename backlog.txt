@@ -2,3 +2,5 @@
 - Mejora: En el display se debiesen poder ingresar todos los números que se quisieran, y la visión irse corriendo hacia la derecha a medida que el input supera la capacidad de la pantalla.
 - Luego de mostrar un resultado, al ingresar un número nuevo, el resultado anterior debe borrarse.
 - Usar ternary operator when possible
+- Agregar paréntesis en keypad
+- Agregar botón de prender y apagar en la calcu
